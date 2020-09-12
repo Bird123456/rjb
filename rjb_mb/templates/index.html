@@ -1,0 +1,424 @@
+
+<html lang="en">
+
+<head>
+<!-- META DATA -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+<!-- TITLE OF SITE -->
+<title>Home</title>
+
+<!-- favicon -->
+<!--<link rel="shortcat icon" href="/favicon.ico" type="image/x-icon">-->
+
+<!--font-awesome.min.css-->
+<link rel="stylesheet" href="../static/css/font-awesome.min.css">
+
+<!--linear icon css-->
+<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+<!--chartist.min.css-->
+<link rel="stylesheet" href="../static/chartist/css/chartist.min.css">
+
+<!--bootstrap.min.css-->
+<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+<!--style.css-->
+<link rel="stylesheet" href="../static/css/style.css">
+
+<!--responsive.css-->
+<link rel="stylesheet" href="../static/css/responsive.css">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+	<script src="../static/js/echarts.min.js"></script>
+	<script src="../static/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+<!-- wrapper -->
+<div id="wrapper">
+<!-- MAIN -->
+<div class="main">
+	<!-- MAIN CONTENT -->
+	<div class="main-content">
+		<div class="container-fluid">
+			<div class="main-content-head">
+				<h2>盈风战队</h2>
+				<p>视频全量分析建模</p>
+				<div class="box">
+						<div class="box-head">
+							<form action = "/uploader" method = "POST"
+								 enctype = "multipart/form-data">
+								 <input type = "file" name = "file" value="选择视频文件"/>
+								 <input type = "submit" value="上传文件"/>
+							</form>
+							<form>
+								<input type = "submit" value="运行测试代码"/>
+							</form>
+						</div><!--/.box-head-->
+					</div><!--/.box-->
+			</div>
+
+			<div class="profile-content">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="profile-state">
+							<div class="icon-box">
+								<span class="icon-bg icon-bg-1">
+									<img src="../static/images/car.jpg" alt="user-icon">
+								</span>
+								<h2>Car</h2>
+							</div><!--/.icon-box-->
+							<!--<script>-->
+								<!--function getdata(){-->
+									   <!--$.ajax({-->
+										     <!--type: "GET",-->
+											 <!--dataType: "json",-->
+											 <!--url: "/getdata2",//ajax请求-->
+											 <!--success: function(result){-->
+												 <!--var person_data=result.car-->
+												 <!--document.getElementById("car").value=person_data;-->
+											 <!--}-->
+									   <!--});-->
+								<!--}setInterval(function(){-->
+								<!--getdata()-->
+							<!--},3000)-->
+							<!--</script>-->
+							<h3>
+								<input id="car" type="text" value="0" style="border: none"/>
+							</h3>
+
+						</div><!--/.profile-state-->
+					</div><!--/.col-->
+					<div class="col-sm-3">
+						<div class="profile-state">
+							<div class="icon-box">
+								<span class="icon-bg icon-bg-2">
+									<img src="../static/images/Person.jpg" alt="add-cart">
+								</span>
+								<h2>Person</h2>
+							</div><!--/.icon-box-->
+							<!--<script>-->
+								<!--function getdata(){-->
+									   <!--$.ajax({-->
+										     <!--type: "GET",-->
+											 <!--dataType: "json",-->
+											 <!--url: "/getdata2",//ajax请求-->
+											 <!--success: function(result){-->
+												 <!--var person_data=result.person-->
+												 <!--document.getElementById("person").value=person_data;-->
+											 <!--}-->
+									   <!--});-->
+								<!--}setInterval(function(){-->
+								<!--getdata()-->
+							<!--},3000)-->
+							<!--</script>-->
+							<h3>
+								<input id="person" type="text" value="0" style="border: none"/>
+							</h3>
+
+						</div><!--/.profile-state-->
+					</div><!--/.col-->
+					<div class="col-sm-3">
+						<div class="profile-state">
+							<div class="icon-box">
+								<span class="icon-bg icon-bg-3">
+									<img src="../static/images/motbike.jpg" alt="money-icon">
+								</span>
+								<h2>Motorbike</h2>
+							</div><!--/.icon-box-->
+							<!--<script>-->
+								<!--function getdata(){-->
+									   <!--$.ajax({-->
+										     <!--type: "GET",-->
+											 <!--dataType: "json",-->
+											 <!--url: "/getdata2",//ajax请求-->
+											 <!--success: function(result){-->
+												 <!--var person_data=result.person-->
+												 <!--var car_data = result.car-->
+												 <!--var motorbike_data = result.motorbike-->
+												 <!--var bicycle_data = result.bicycle-->
+												 <!--document.getElementById("motorbike").value=person_data;-->
+											 <!--}-->
+									   <!--});-->
+								<!--}setInterval(function(){-->
+								<!--getdata()-->
+							<!--},3000)-->
+							<!--</script>-->
+							<h3>
+								<input id="motorbike" type="text" value="0" style="border: none"/>
+							</h3>
+
+						</div><!--/.profile-state-->
+					</div><!--/.col-->
+					<div class="col-sm-3">
+						<div class="profile-state">
+							<div class="icon-box">
+								<span class="icon-bg icon-bg-4">
+									<img src="../static/images/bicycle.jpg" alt="deliver-icon">
+								</span>
+								<h2>Bicycle</h2>
+							</div><!--/.icon-box-->
+							<script>
+								function getdata(){
+									   $.ajax({
+										     type: "GET",
+											 dataType: "json",
+											 url: "/getdata2",//ajax请求
+											 success: function(result){
+												 var person_data=result.person
+												 var car_data = result.car
+												 var motorbike_data = result.motorbike
+												 var bicycle_data = result.bicycle
+												 document.getElementById("person").value=person_data;
+												 document.getElementById("car").value=car_data;
+												 document.getElementById("bicycle").value=bicycle_data;
+												 document.getElementById("motorbike").value=motorbike_data;
+											 }
+									   });
+								}setInterval(function(){
+								getdata()
+							},3000)
+							</script>
+							<h3>
+								<input id="bicycle" type="text" value="0" style="border: none"/>
+							</h3>
+
+						</div><!--/.profile-state-->
+					</div><!--/.col-->
+				</div><!--/.row-->
+			</div><!--/.profile-content-->
+
+			<!--饼状图展示-->
+			<div class="row">
+				<div class="col-md-6 col-sm-6">
+					<div class="box">
+						<div class="box-head">
+							<h2>百分比</h2>
+						</div><!--/.box-head-->
+						<div class="item">
+							<div id="main2" style="width: 400px;height:300px;margin: 0 auto;"></div>
+							<script type="text/javascript">
+							// 基于准备好的dom，初始化echarts实例
+							var myChart2 = echarts.init(document.getElementById('main2'));
+							// 指定图表的配置项和数据
+							myChart2.setOption({
+							   title : {
+									text: '目标检测',
+									//subtext: '纯属虚构',
+									x:'center'
+								},
+								tooltip : {
+									trigger: 'item',
+									formatter: "{a} <br/>{b} : {c} ({d}%)"
+								},
+								legend: {
+									orient : 'vertical',
+									x : 'left',
+									data:[]
+								},
+								toolbox: {
+									show : true,
+									feature : {
+										mark : {show: true},
+										dataView : {show: true, readOnly: false},
+										magicType : {
+											show: true,
+											type: ['pie', 'funnel'],
+											option: {
+												funnel: {
+													x: '25%',
+													width: '50%',
+													funnelAlign: 'left',
+													max: 1548
+												}
+											}
+										},
+										restore : {show: true},
+										saveAsImage : {show: true}
+									}
+								},
+                calculable : true,
+                series : [
+                    {
+                        name:'目标检测',
+                        type:'pie',
+                        radius : '65%',
+                        center: ['50%', '60%'],
+                        data:[]
+                    }
+                ]
+        });
+
+							// 异步加载数据
+							function get2(){
+								xvalue2=[],
+								yvalue2=[]
+								myChart2.showLoading(); // 显示加载动画
+								$.ajax({
+									type: "GET",
+									url: "/getdata",
+									dataType: "json",
+									success: function (result) {
+										for(var i=0;i<result.length;i++)
+										{
+											var statisticsObj = {name:'',value:''};
+											xvalue2.push(result[i].name)
+											statisticsObj.name=result[i].name
+											statisticsObj.value = result[i].num;
+											yvalue2.push(statisticsObj)
+										}
+										myChart2.hideLoading();
+										myChart2.setOption({
+											legend: {
+												show: true,
+												x: '10%',
+												data: xvalue2 //这里是图表上的数据
+											},
+											series: [{
+												name: '目标检测',
+												type: 'pie',
+												radius : '70%',
+												center: ['50%', '60%'],
+												data: yvalue2,    //这里是异步加载系列列表
+
+												itemStyle: {
+													normal: {
+														color: function(params) {
+															// build a color map as your need.
+															var colorList = [
+															  '#FF0000','#FF7D00','#FFFF00','#00FF00','#00FFFF',
+															   '#0000FF','#FF00FF','#FAD860','#F3A43B','#60C0DD',
+															   '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+															];
+															return colorList[params.dataIndex];
+														},
+													}
+												},
+
+
+											}]
+										});
+									}
+								});
+							}
+								setInterval(function(){
+								get2()
+							},3000)
+							</script>
+						</div><!--/.item-->
+					</div><!--/.box-->
+				</div><!--/.col-->
+
+				<!--柱状图展示-->
+				<div class="col-md-6 col-sm-6">
+					<div class="box">
+						<div class="item">
+							<div id="main1" style="width: 400px;height:300px;margin: 0 auto;"></div>
+							<script type="text/javascript">
+							// 基于准备好的dom，初始化echarts实例
+							var myChart1 = echarts.init(document.getElementById('main1'));
+							// 指定图表的配置项和数据
+							myChart1.setOption({
+								title: {
+									text: '可视化展示'
+								},
+								tooltip: {},
+								legend: {
+									data: ['目标检测']
+								},
+								xAxis: {
+									data: []
+								},
+								yAxis: {},
+								series: [{
+									name: 'person',
+									type: 'bar',
+									data: []
+								}]
+							});
+							// 异步加载数据
+							function get() {
+								myChart1.showLoading(); // 显示加载动画
+								xvalue=[],
+        						yvalue=[]
+								$.ajax({
+									type: "GET",
+									url: "/getdata",
+									dataType: "json",
+									success: function (result) {
+										for (var i = 0; i < result.length; i++) {
+											xvalue.push(result[i].name)
+											yvalue.push(result[i].num)
+										}
+										myChart1.hideLoading();
+										myChart1.setOption({
+											xAxis: {
+												data: xvalue,
+												"axisLabel":{
+													interval: 0
+												}
+											},
+											yAxis: {},
+											series: [{
+												name: '目标检测',
+												type: 'bar',
+												data: yvalue
+											}]
+										});
+									}
+								});
+							}
+							setInterval(function(){
+								get()
+							},3000)
+							</script>
+						</div><!--/.item-->
+					</div><!--/.box-->
+				</div><!--/.col-->
+			</div><!--/.row-->
+		</div><!--/.container-fluid-->;
+	</div><!--/.main-content-->
+</div>
+</div>
+
+
+
+<!--jquery-1.12.4.min.js-->
+<script  src="../static/js/jquery.min.js"></script>
+
+<!--chartist.min.js-->
+<script src="../static/chartist/js/chartist.min.js"></script>
+<script src="../static/chartist/js/chartist-tooltip-plugin.js"></script>
+<script src="../static/chartist/js/chartist-custom.js"></script>
+
+<!--bootstrap.min.js-->
+<script src="../static/js/bootstrap.min.js"></script>
+
+<!--jquery.slimscroll.min.js-->
+<script src="../static/js/jquery.slimscroll.min.js"></script>
+
+<!--feather.min.js-->
+<script src="../static/js/feather.min.js"></script>
+
+<!-- DataMaps Plugin Js -->
+<script src="../static/js/d3.min.js"></script>
+<script src="../static/js/topojson.js"></script>
+<script src="../static/js/datamaps.world.min.js"></script>
+
+<!--fontawesome-all.min.js-->
+<script src="../static/js/fontawesome-all.min.js"></script>
+
+<!--Custom JS-->
+<script src="../static/js/custom.js"></script>
+
+</body>
+</html>
